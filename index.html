@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script>
+        if (!localStorage.getItem("token")) {
+            window.location.href = "login.html";
+        }
+    </script>
+    <meta charset="UTF-8">
+    <title>Diet Planner - Dashboard</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<!-- <body onload="protectPage()"> -->
+
+<body>
+
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-success">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Diet Planner</a>
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="planner.html">Weekly Planner</a></li>
+            </ul>
+            <button class="btn btn-outline-light ms-3" onclick="logoutUser()">
+                Logout
+            </button>
+
+        </div>
+    </nav>
+
+    <!-- Dashboard -->
+    <div class="container my-5">
+        <!-- Dashboard Header -->
+        <div class="mb-4">
+            <h2 class="fw-bold">Dashboard</h2>
+            <p class="text-muted">
+                Overview of your diet planning and health goals
+            </p>
+        </div>
+
+        <!-- Insight Cards -->
+        <div class="row g-4">
+
+            <div class="col-md-3">
+                <div class="card shadow-sm text-center p-3">
+                    <h5>🎯 Goal</h5>
+                    <p class="text-muted mb-0">Weight Management</p>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="card shadow-sm text-center p-3">
+                    <h5>🗓️ Weekly Plan</h5>
+                    <p class="text-muted mb-0">Not Saved Yet</p>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="card shadow-sm text-center p-3">
+                    <h5>🥗 Diet Type</h5>
+                    <p class="text-muted mb-0">Vegetarian</p>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="card shadow-sm text-center p-3">
+                    <h5>📊 Focus</h5>
+                    <p class="text-muted mb-0">Balanced Nutrition</p>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Quick Actions -->
+        <div class="mt-5">
+            <h4 class="mb-3">Quick Actions</h4>
+
+            <div class="row g-3">
+                <div class="col-md-4">
+                    <a href="planner.html" class="btn btn-success w-100">
+                        Plan This Week
+                    </a>
+                </div>
+
+                <div class="col-md-4">
+                    <a href="profile.html" class="btn btn-outline-success w-100">
+                        Update Profile
+                    </a>
+                </div>
+
+                <div class="col-md-4">
+                    <a href="view-plan.html" class="btn btn-outline-success w-100">
+                        View Meal Plan
+                    </a>
+
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Welcome Section -->
+        <div class="row mb-4 mt-5">
+            <div class="col-md-8">
+                <div class="p-4 bg-light rounded shadow-sm">
+                    <h4>Welcome 👋</h4>
+                    <p>Plan your meals and track nutrition easily</p>
+                    <span class="badge bg-success">Goal: Healthy Lifestyle</span>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="p-4 bg-success text-white rounded shadow-sm text-center">
+                    <h5>Weekly Progress</h5>
+                    <h2>0 / 7</h2>
+                    <small>Days Planned</small>
+                </div>
+            </div>
+        </div>
+
+        <!-- Summary Cards -->
+        <div class="row text-center mb-4">
+            <div class="col-md-3">
+                <div class="card shadow-sm">
+                    <div class="card-body">
+                        🔥
+                        <h6>Calories</h6>
+                        <p>-- kcal/day</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card shadow-sm">
+                    <div class="card-body">
+                        💪
+                        <h6>Protein</h6>
+                        <p>Moderate</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card shadow-sm">
+                    <div class="card-body">
+                        🥬
+                        <h6>Vitamins</h6>
+                        <p>Balanced</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card shadow-sm">
+                    <div class="card-body">
+                        📊
+                        <h6>Completion</h6>
+                        <p>0%</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- CTA -->
+        <div class="text-center mb-4">
+            <a href="planner.html" class="btn btn-success btn-lg">Plan Weekly Diet</a>
+        </div>
+
+        <!-- Tips -->
+        <div class="row">
+            <div class="col-md-6">
+                <div class="alert alert-success shadow-sm">
+                    💡 <strong>Nutrition Tip:</strong> Include protein in every meal.
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="alert alert-warning shadow-sm">
+                    ⭐ <strong>Motivation:</strong> Small healthy steps matter.
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="alert alert-success mt-5 text-center">
+        💚 Small healthy choices every day lead to big results over time.
+    </div>
+<script src="js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

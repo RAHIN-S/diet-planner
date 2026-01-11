@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <title>Weekly Diet Planner</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body onload="protectPage()">
+    <!-- <body> -->
+
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-success">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Diet Planner</a>
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link active" href="planner.html">Weekly Planner</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="mb-4 text-center mt-4">
+        <h2 class="fw-bold">Weekly Diet Planner</h2>
+        <p class="text-muted">
+            Plan your meals wisely to match your health goals
+        </p>
+    </div>
+
+    <div class="alert alert-success text-center">
+        🎯 Goal Reminder: Balanced nutrition with adequate protein, vitamins, and fiber
+    </div>
+
+    <div class="mt-4 text-center">
+        <span class="badge bg-success me-2">🥩 Protein</span>
+        <span class="badge bg-warning text-dark me-2">🍞 Carbohydrates</span>
+        <span class="badge bg-info text-dark me-2">🥦 Vitamins</span>
+        <span class="badge bg-secondary">🥜 Fats</span>
+    </div>
+
+
+    <div class="container my-5">
+        <h2 class="text-center mb-4">Weekly Diet Planner</h2>
+
+        <form id="plannerForm">
+            <div class="table-responsive">
+                <table class="table table-bordered text-center align-middle">
+                    <thead class="table-success">
+                        <tr>
+                            <th>Day</th>
+                            <th>Breakfast</th>
+                            <th>Lunch</th>
+                            <th>Dinner</th>
+                            <th>Snacks</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Repeat for each day -->
+                        <tr>
+                            <th>Monday</th>
+                            <td><select class="form-select" data-meal="breakfast" disabled>
+                                    <option value="">Select</option>
+                                </select></td>
+                            <td><select class="form-select" data-meal="lunch" disabled>
+                                    <option value="">Select</option>
+                                </select></td>
+                            <td><select class="form-select" data-meal="dinner" disabled>
+                                    <option value="">Select</option>
+                                </select></td>
+                            <td><select class="form-select" data-meal="snacks" disabled>
+                                    <option value="">Select</option>
+                                </select></td>
+                        </tr>
+                        <tr>
+                            <th>Tuesday</th>
+                            <td><select class="form-select" data-meal="breakfast" disabled>
+                                    <option value="">Select</option>
+                                </select></td>
+                            <td><select class="form-select" data-meal="lunch" disabled>
+                                    <option value="">Select</option>
+                                </select></td>
+                            <td><select class="form-select" data-meal="dinner" disabled>
+                                    <option value="">Select</option>
+                                </select></td>
+                            <td><select class="form-select" data-meal="snacks" disabled>
+                                    <option value="">Select</option>
+                                </select></td>
+                        </tr>
+                        <tr>
+                            <th>Wednesday</th>
+                            <td><select class="form-select" data-meal="breakfast" disabled>
+                                    <option value="">Select</option>
+                                </select></td>
+                            <td><select class="form-select" data-meal="lunch" disabled>
+                                    <option value="">Select</option>
+                                </select></td>
+                            <td><select class="form-select" data-meal="dinner" disabled>
+                                    <option value="">Select</option>
+                                </select></td>
+                            <td><select class="form-select" data-meal="snacks" disabled>
+                                    <option value="">Select</option>
+                                </select></td>
+                        </tr>
+                        <tr>
+                            <th>Thursday</th>
+                            <td><select class="form-select" data-meal="breakfast" disabled>
+                                    <option value="">Select</option>
+                                </select></td>
+                            <td><select class="form-select" data-meal="lunch" disabled>
+                                    <option value="">Select</option>
+                                </select></td>
+                            <td><select class="form-select" data-meal="dinner" disabled>
+                                    <option value="">Select</option>
+                                </select></td>
+                            <td><select class="form-select" data-meal="snacks" disabled>
+                                    <option value="">Select</option>
+                                </select></td>
+                        </tr>
+                        <tr>
+                            <th>Friday</th>
+                            <td><select class="form-select" data-meal="breakfast" disabled>
+                                    <option value="">Select</option>
+                                </select></td>
+                            <td><select class="form-select" data-meal="lunch" disabled>
+                                    <option value="">Select</option>
+                                </select></td>
+                            <td><select class="form-select" data-meal="dinner" disabled>
+                                    <option value="">Select</option>
+                                </select></td>
+                            <td><select class="form-select" data-meal="snacks" disabled>
+                                    <option value="">Select</option>
+                                </select></td>
+                        </tr>
+                        <tr>
+                            <th>Saturday</th>
+                            <td><select class="form-select" data-meal="breakfast" disabled>
+                                    <option value="">Select</option>
+                                </select></td>
+                            <td><select class="form-select" data-meal="lunch" disabled>
+                                    <option value="">Select</option>
+                                </select></td>
+                            <td><select class="form-select" data-meal="dinner" disabled>
+                                    <option value="">Select</option>
+                                </select></td>
+                            <td><select class="form-select" data-meal="snacks" disabled>
+                                    <option value="">Select</option>
+                                </select></td>
+                        </tr>
+                        <tr>
+                            <th>Sunday</th>
+                            <td><select class="form-select" data-meal="breakfast" disabled>
+                                    <option value="">Select</option>
+                                </select></td>
+                            <td><select class="form-select" data-meal="lunch" disabled>
+                                    <option value="">Select</option>
+                                </select></td>
+                            <td><select class="form-select" data-meal="dinner" disabled>
+                                    <option value="">Select</option>
+                                </select></td>
+                            <td><select class="form-select" data-meal="snacks" disabled>
+                                    <option value="">Select</option>
+                                </select></td>
+                        </tr>
+
+                        <!-- Copy same structure for Tue–Sun -->
+
+                    </tbody>
+                </table>
+            </div>
+        </form>
+
+        <!-- Nutrition Info -->
+        <div id="nutritionInfo" class="mt-5" style="display:none;">
+            <div class="card shadow-lg">
+                <div class="card-header bg-success text-white d-flex justify-content-between">
+                    <span>🍽 Nutrition Details</span>
+                    <span id="mealTag" class="badge bg-light text-success"></span>
+                </div>
+                <div class="card-body">
+                    <h4 id="foodName" class="text-success"></h4>
+                    <p><strong>Calories:</strong> <span id="calories"></span> kcal</p>
+                    <p><strong>Protein:</strong> <span id="protein"></span></p>
+                    <p><strong>Vitamins:</strong> <span id="vitamins"></span></p>
+                    <div class="alert alert-success">
+                        <strong>Benefit:</strong> <span id="benefit"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="text-center mt-4">
+            <div class="text-center mt-4">
+                <button id="editPlanBtn" class="btn btn-outline-success me-2" type="button"
+                    onclick="enablePlannerEdit()">
+                    Edit Plan
+                </button>
+
+                <button id="savePlanBtn" class="btn btn-success d-none" type="button" onclick="savePlan()">
+                    Save Plan
+                </button>
+            </div>
+
+        </div>
+    </div>
+
+
+<script src="js/script.js"></script>
+<script src="js/data/foodOptions.js"></script>
+
+<!-- jQuery + Select2 -->
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+
+<script src="js/planner.js"></script>
+
+
+</body>
+
+</html>
